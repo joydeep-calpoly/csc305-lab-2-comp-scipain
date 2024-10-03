@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Joydeep/Desktop/CSC 305/Week-2/java-json.jar"/>
+	<classpathentry kind="lib" path="/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/lib/java-json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
