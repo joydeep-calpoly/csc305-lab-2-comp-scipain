@@ -9,7 +9,5 @@ public class Award {
         this.year = year;
     }
 
-    public void getAwards(Person person1){
-
-    }
+    
 }
