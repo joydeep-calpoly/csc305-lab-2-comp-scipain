@@ -7,5 +7,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/lib/jackson-annotations-2.12.3.jar"/>
+	<classpathentry kind="lib" path="/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/lib/jackson-core-2.12.3.jar"/>
+	<classpathentry kind="lib" path="/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/lib/jackson-databind-2.12.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

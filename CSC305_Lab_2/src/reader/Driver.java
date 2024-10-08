@@ -21,14 +21,28 @@ public class Driver {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("test");
 
         Person person1 = new Person("John", "Existing");
         Person person2 = new Person("Jane", "Hating");
         Person person3 = new Person("My money", "Not Existing");
+
         ArrayList<Person> people = new ArrayList<Person>();
+
+        Award award1 = new Award("worst programmer", 2024);
+        Award award2 = new Award("skill issue", 2001);
+        Award award3 = new Award("broke mf", 2020);
+
+        ArrayList<Award> awards = new ArrayList<Award>();
+
         people.add(person1);
         people.add(person2);
         people.add(person3);
+
+        awards.add(award1);
+        awards.add(award2);
+        awards.add(award3);
+
+        System.out.println();
+        System.out.println();
     }
 }

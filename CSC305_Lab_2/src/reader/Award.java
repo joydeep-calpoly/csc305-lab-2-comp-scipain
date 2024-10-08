@@ -4,7 +4,7 @@ public class Award {
     private int year;
     private String awardName;
 
-    public Award(String awardName, int year){
+    protected Award(String awardName, int year){
         this.awardName = awardName;
         this.year = year;
     }
@@ -16,5 +16,5 @@ public class Award {
     public String getAwardName(){
         return awardName;
     }
-    
+
 }
