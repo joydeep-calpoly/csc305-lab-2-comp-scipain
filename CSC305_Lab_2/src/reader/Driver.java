@@ -8,15 +8,18 @@ import org.json.*;
 
 public class Driver {
     public static void main(String[] args) {
-        
+        Scanner keyboard = new Scanner(System.in);
         try {
-            File input_1 = new File("input1.json");
-            File input_2 = new File("input2.json");
-            File input_3 = new File("input3.json");  
+            // System.out.println("Enter a json file to be read");
+            // String filename = keyboard.nextLine();
+
+            File input_1 = new File("/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/input1.json");
             Scanner reader = new Scanner(input_1);
+            String check = "";
             while (reader.hasNextLine()) {
-                
+                check += reader.nextLine();
             }
+            System.out.println(check);
             
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -28,15 +31,16 @@ public class Driver {
 
         ArrayList<Person> people = new ArrayList<Person>();
 
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+
+
         Award award1 = new Award("worst programmer", 2024);
         Award award2 = new Award("skill issue", 2001);
         Award award3 = new Award("broke mf", 2020);
 
         ArrayList<Award> awards = new ArrayList<Award>();
-
-        people.add(person1);
-        people.add(person2);
-        people.add(person3);
 
         awards.add(award1);
         awards.add(award2);
