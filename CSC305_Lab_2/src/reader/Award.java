@@ -9,5 +9,12 @@ public class Award {
         this.year = year;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public String getAwardName(){
+        return awardName;
+    }
     
 }

@@ -9,4 +9,12 @@ class Person {
         this.name = name;
         this.knownFor = knownFor;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getKnownFor(){
+        return knownFor;
+    }
 }
