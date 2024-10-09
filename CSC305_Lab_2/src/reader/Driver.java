@@ -1,6 +1,7 @@
 package reader;
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 import org.json.*;
@@ -8,45 +9,30 @@ import org.json.*;
 
 public class Driver {
     public static void main(String[] args) {
-        Scanner keyboard = new Scanner(System.in);
+        ArrayList<Person> people = new ArrayList<Person>();
+        ArrayList<Award> awardList = new ArrayList<Award>();
         try {
-            // System.out.println("Enter a json file to be read");
-            // String filename = keyboard.nextLine();
+            String contents = new String(Files.readAllBytes((Paths.get("CSC305_Lab_2/input1.json"))));
+            JSONObject input = new JSONObject(contents);
+            String name = input.getString("name");
+            JSONArray knownfor = input.getJSONArray("knownFor");
+            JSONArray awards = input.getJSONArray("awards");
 
-            File input_1 = new File("/home/alex/Cal-poly-stuff/CSC-305/csc305-lab-2-comp-scipain/CSC305_Lab_2/input1.json");
-            Scanner reader = new Scanner(input_1);
-            String check = "";
-            while (reader.hasNextLine()) {
-                check += reader.nextLine();
-            }
-            System.out.println(check);
+            Person person1 = new Person(name, knownfor);
+            people.add(person1);
             
-        } catch (FileNotFoundException e) {
+
+            for (Person person : people) {
+                System.out.println(person.getName());
+                System.out.println(person.getKnownFor());
+            }  
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        Person person1 = new Person("John", "Existing");
-        Person person2 = new Person("Jane", "Hating");
-        Person person3 = new Person("My money", "Not Existing");
-
-        ArrayList<Person> people = new ArrayList<Person>();
-
-        people.add(person1);
-        people.add(person2);
-        people.add(person3);
-
-
-        Award award1 = new Award("worst programmer", 2024);
-        Award award2 = new Award("skill issue", 2001);
-        Award award3 = new Award("broke mf", 2020);
-
-        ArrayList<Award> awards = new ArrayList<Award>();
-
-        awards.add(award1);
-        awards.add(award2);
-        awards.add(award3);
-
-        System.out.println();
-        System.out.println();
+            
+        
     }
 }
